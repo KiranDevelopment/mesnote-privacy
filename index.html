@@ -9,20 +9,24 @@
     h1 { font-size: 1.5rem; }
     h2 { font-size: 1.1rem; margin-top: 1.5rem; }
     p { margin: 0.5rem 0; }
+    ul { margin: 0.5rem 0; padding-left: 1.25rem; }
     .updated { color: #666; font-size: 0.9rem; }
   </style>
 </head>
 <body>
   <h1>Privacy Policy – MesNote</h1>
-  <p class="updated">Last updated: March 2026</p>
+  <p class="updated">Last updated: 26 March 2026</p>
 
-  <p>MesNote ("the app") is a note-taking application. This policy describes what data the app uses and how it is handled.</p>
+  <p>MesNote (“the app”) is a note-taking application. This policy describes what data the app uses and how it is handled.</p>
 
   <h2>1. Data we collect and use</h2>
   <ul>
-    <li><strong>Account data:</strong> If you sign in (optional), we store your email address and account identifier to provide sync across your devices. This is processed by Firebase (Google).</li>
-    <li><strong>Note content:</strong> Your notes (text, images, audio, video) are stored on your device. If you sign in, only text notes are currently synced to your account in Firebase. Media notes (images, audio, video) remain on your device. We do not use note content for advertising or analytics.</li>
+    <li><strong>Account data:</strong> If you sign in (optional), we store your email address and account identifier so you can use the same account on multiple devices. Authentication and cloud storage are provided by <strong>Firebase</strong> (Google).</li>
+    <li><strong>Note content on your device:</strong> Your notes can include text, images, audio, and video. That content is stored locally on your device (e.g. in the app’s database). We do not use note content for advertising.</li>
+    <li><strong>Cloud sync (optional, beta):</strong> If you are signed in, the app may sync a <strong>limited subset</strong> of your notes to your account in Firebase: typically <strong>note titles, tags, and text messages</strong>. <strong>Images, audio, and video are not uploaded</strong> as part of this sync and are not restored from the cloud to a new device. Sync is described as beta in the app and may change.</li>
+    <li><strong>Locked notes:</strong> If you lock a note, your <strong>password is not sent in plain text</strong> to the cloud. A <strong>cryptographic hash</strong> may be stored in your account so another signed-in device can verify the same password after sync. For locked notes, <strong>titles, tags, and message text are not synced to the cloud</strong> in the same way as unlocked notes; details follow the behaviour shown in the app.</li>
     <li><strong>Camera and photos:</strong> The app can use your device’s camera and photo library to add images and videos to your notes. Media is only used inside your notes. We do not access the camera or photos for any other purpose.</li>
+    <li><strong>Crash and error diagnostics:</strong> The app may send technical reports (e.g. crash logs, app version, device type) to <strong>Sentry</strong> to help fix bugs. These reports are not used for advertising.</li>
   </ul>
 
   <h2>2. Permissions</h2>
@@ -31,19 +35,20 @@
     <li><strong>Camera</strong> – to take photos/videos and add them to notes.</li>
     <li><strong>Microphone</strong> – to record audio in notes.</li>
     <li><strong>Storage / media</strong> – to save and attach images, audio, and video to notes.</li>
+    <li><strong>Notifications</strong> – if you use reminders, to show alerts at the times you choose.</li>
   </ul>
   <p>These are only used for the features described above.</p>
 
   <h2>3. Where data is stored</h2>
-  <p>Data is stored on your device and, if you use sign-in, on secure servers (Firebase/Google Cloud). Data in transit is encrypted (HTTPS).</p>
+  <p>Data is stored on your device and, if you use sign-in, relevant account and sync data on secure servers operated by Google (Firebase / Google Cloud). Data in transit is encrypted using HTTPS/TLS where applicable.</p>
 
   <h2>4. We do not sell your data</h2>
   <p>We do not sell your personal data or note content to third parties.</p>
 
   <h2>5. Your choices</h2>
-  <p>You can stop using sync by signing out in the app. To delete your account and synced data, use the account deletion option in the app or contact us (see below).</p>
+  <p>You can stop using cloud sync by signing out in the app. Media that was never uploaded will remain only on your device. To delete your account and synced data, use the account deletion option in the app or contact us (see below).</p>
 
   <h2>6. Contact</h2>
-  <p>For questions about this privacy policy or your data, contact us at: <strong>  kiran.mesnote@gmail.com</strong></p>
+  <p>For questions about this privacy policy or your data, contact us at: <strong>kiran.mesnote@gmail.com</strong></p>
 </body>
 </html>
